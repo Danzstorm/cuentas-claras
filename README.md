@@ -14,6 +14,7 @@ npm run spec:check   # ¿cada requisito tiene su test?
 |---|---|
 | `inicio` | Proyecto vacío + `AGENTS.md` + plantilla de spec |
 | `spec-lista` | Spec con 6 requisitos + plan y tareas |
+| `t1-listo` | Tarea 1 hecha (dinero y división) |
 | `final` | App completa, tests en verde |
 
 ```bash
