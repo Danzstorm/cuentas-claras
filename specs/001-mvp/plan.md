@@ -16,7 +16,7 @@
 **Pagos:** Sofía → Ana 38.33 · Luis → Ana 25.33 · Luis → Diego 6.00
 
 ## Tareas
-- [ ] **T1 · Dinero y división** (RF-3, RF-4, RF-5) — `money.ts`, `split.ts`
+- [x] **T1 · Dinero y división** (RF-3, RF-4, RF-5) — `money.ts`, `split.ts`
   Hecho cuando: `"12,5"` → 1250 y S/ 10 entre 3 → 3.34 / 3.33 / 3.33.
 - [ ] **T2 · Participantes y gastos** (RF-1, RF-2, RF-3) — `group.ts`
   Hecho cuando: rechaza "ana" si ya existe "Ana" y un gasto sin monto.
