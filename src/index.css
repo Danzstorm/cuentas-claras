@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-paper: #f6f1e7;
+  --color-receipt: #fffdf8;
+  --color-ink: #1d1a16;
+  --color-muted: #7a7166;
+  --color-line: #e3dacb;
+  --color-owe: #d9472b;
+  --color-owe-soft: #fbe3dc;
+  --color-get: #1f8a5b;
+  --color-get-soft: #dcf1e6;
+  --color-accent: #f2b632;
+}
+
+body {
+  background-color: var(--color-paper);
+  background-image: radial-gradient(rgb(29 26 22 / 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Borde dentado de ticket */
+.receipt {
+  position: relative;
+  background: var(--color-receipt);
+  box-shadow: 0 1px 0 var(--color-line), 0 12px 30px -18px rgb(29 26 22 / 0.35);
+}
+.receipt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 8px;
+  background: linear-gradient(-45deg, transparent 6px, var(--color-receipt) 0) 0 0 / 12px 8px repeat-x,
+    linear-gradient(45deg, transparent 6px, var(--color-receipt) 0) 0 0 / 12px 8px repeat-x;
+}
+
+.dashed {
+  border-top: 1.5px dashed var(--color-line);
+}
+
+@keyframes pop {
+  0% { transform: scale(0.96); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.pop { animation: pop 0.25s ease-out; }
+
+@keyframes stamp {
+  0% { transform: rotate(-8deg) scale(1.6); opacity: 0; }
+  70% { transform: rotate(-8deg) scale(0.95); opacity: 1; }
+  100% { transform: rotate(-8deg) scale(1); opacity: 1; }
+}
+.stamp { animation: stamp 0.45s cubic-bezier(.2,.8,.2,1) both; }
